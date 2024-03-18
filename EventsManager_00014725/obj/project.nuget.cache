@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O3N1RpG4xrbEpO+tUJpwgJmzt+DXPj83JEh7D6c9zfp7PIFmTXBXLYJGWuPkkCI+XmhWHqS3O/vvGxCAYGsdHg==",
+  "dgSpecHash": "Ooy1u6vnm0OSsvfSiSmNRK1ZFWiY8gAMw9wGJJIH4TDYuPUMyqtoCnfl/o5RiLsGYn27XZU9m/zr6NAK9LOkrg==",
   "success": true,
-  "projectFilePath": "D:\\00014725\\EventsManager_00014725\\EventsManager_00014725\\EventsManager_00014725.csproj",
+  "projectFilePath": "D:\\EventsManager_00014725\\EventsManager_00014725\\EventsManager_00014725.csproj",
   "expectedPackageFiles": [
     "E:\\Users\\00014725\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "E:\\Users\\00014725\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

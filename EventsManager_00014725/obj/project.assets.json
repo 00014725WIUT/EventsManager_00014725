@@ -2445,11 +2445,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\00014725\\EventsManager_00014725\\EventsManager_00014725\\EventsManager_00014725.csproj",
+      "projectUniqueName": "D:\\EventsManager_00014725\\EventsManager_00014725\\EventsManager_00014725.csproj",
       "projectName": "EventsManager_00014725",
-      "projectPath": "D:\\00014725\\EventsManager_00014725\\EventsManager_00014725\\EventsManager_00014725.csproj",
+      "projectPath": "D:\\EventsManager_00014725\\EventsManager_00014725\\EventsManager_00014725.csproj",
       "packagesPath": "E:\\Users\\00014725\\.nuget\\packages\\",
-      "outputPath": "D:\\00014725\\EventsManager_00014725\\EventsManager_00014725\\obj\\",
+      "outputPath": "D:\\EventsManager_00014725\\EventsManager_00014725\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
