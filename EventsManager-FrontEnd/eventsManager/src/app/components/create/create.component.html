@@ -1,1 +1,59 @@
-<p>create works!</p>
+<div class="p-8 mt-8 flex justify-center">
+    <form class="shadow border w-4/12 p-4">
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Event Name </mat-label>
+                <input matInput name="title" type="text" [(ngModel)]="createEvent.EventName">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Event Date </mat-label>
+                <input matInput name="eventDate" type="date" [(ngModel)]="createEvent.EventDate">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label> Location </mat-label>
+                <input matInput name="location" type="text" [(ngModel)]="createEvent.Location">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label> Cost </mat-label>
+                <input matInput name="cost" type="number" [(ngModel)]="createEvent.Cost">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label> Language </mat-label>
+                <input matInput name="Language" type="text" [(ngModel)]="createEvent.Language">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Choose User</mat-label>
+                <mat-select [(ngModel)]="cID" name="User">
+                    @for(c of use; track c)
+                    {
+                    <mat-option [value]="c.eventId">{{c.userName}}</mat-option>
+                    }
+                </mat-select>
+
+            </mat-form-field>
+        </div>
+        
+        
+        
+
+        <div class="flex justify-center">
+            <button mat-raised-button color="primary" (click)="create()">Create</button>
+        </div>
+    </form>
+</div>
+
+

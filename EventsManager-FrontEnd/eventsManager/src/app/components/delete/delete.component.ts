@@ -2,11 +2,14 @@ import { Component, inject } from '@angular/core';
 import { Event } from '../../event.model';
 import { APIService } from '../../eventservice';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-delete',
   standalone: true,
-  imports: [],
+  imports: [MatChipsModule, MatCardModule, MatButtonModule],
   templateUrl: './delete.component.html',
   styleUrl: './delete.component.css'
 })
@@ -18,7 +21,13 @@ export class DeleteComponent {
     EventDate: new Date(),
     Location: '',
     Cost:  0,
-    Language: ''
+    Language: '',
+    UserId: 0,
+    User : {
+      userName: "",
+      userEmail: "",
+      userPhone: 0
+    }
   }
 
   service = inject(APIService)

@@ -5,5 +5,11 @@ export interface Event {
     EventDate: Date;
     Location: string;
     Cost: number;
-    Language: string
+    Language: string;
+    UserId: number,
+    User: {
+        userName: string;
+        userEmail: string;
+        userPhone: number
+    }
 }

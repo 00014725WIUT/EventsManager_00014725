@@ -13,15 +13,18 @@ export class APIService {
         return this.httpClient.get<Event[]>("https://localhost:7097/api/Events/GetAll/GetAll")
     };
     getByID(id: number){
-        return this.httpClient.get<Event>("https://localhost:7097/api/Events/GetByID/" + id);
+        return this.httpClient.get<Event>("https://localhost:7097/api/Events/GetByID/"+id);
     };
     edit(item:Event) {
         return this.httpClient.put("https://localhost:7097/api/Events/Update", item);
     }
     delete(id:number){
-        return this.httpClient.delete("https://localhost:7097/api/Events/Delete/" + id);
+        return this.httpClient.delete("https://localhost:7097/api/Events/Delete/"+id);
     }
     create(item:Event){
-        return this.httpClient.post<Event>("https://localhost:7097/api/Events/Delete/", item)
+        return this.httpClient.post<Event>("https://localhost:7097/api/Events/Create", item)
+    }
+    getAllUsers() {
+        return this.httpClient.get("https://localhost:7097/api/User/GetAll")
     }
 }

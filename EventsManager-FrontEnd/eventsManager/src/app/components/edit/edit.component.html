@@ -1,1 +1,57 @@
-<p>edit works!</p>
+<div class="p-8 mt-8 flex justify-center">
+    <form class="shadow border w-4/12 p-4">
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Event Name </mat-label>
+                <input matInput name="EventName" type="text" [(ngModel)]="editEvent.EventId">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Event Date </mat-label>
+                <input matInput name="date" type="date" [(ngModel)]="editEvent.EventDate">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Location</mat-label>
+                <input matInput name="location" type="text" [(ngModel)]="editEvent.Location">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Cost </mat-label>
+                <input matInput name="cost" type="number" [(ngModel)]="editEvent.Cost">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Language </mat-label>
+                <input matInput name="Language" type="text" [(ngModel)]="editEvent.Language">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Choose User</mat-label>
+                <mat-select [(ngModel)]="cID" [(value)]="selected" name="User">
+                    @for(c of userCategory; track c)
+                    {
+                    <mat-option [value]="c.id">{{c.name}}</mat-option>
+                    }
+                </mat-select>
+
+            </mat-form-field>
+        </div>
+      
+        <div class="flex justify-around">
+            <button mat-raised-button  (click)="toHome()">Cancel</button>
+            <button mat-raised-button color="primary" (click)="edit()">Edit</button>
+        </div>
+    </form>
+</div>
+
+
