@@ -134,3 +134,4 @@ D:\EventsManager_00014725\EventsManager_00014725\obj\Debug\net6.0\refint\EventsM
 D:\EventsManager_00014725\EventsManager_00014725\obj\Debug\net6.0\EventsManager_00014725.pdb
 D:\EventsManager_00014725\EventsManager_00014725\obj\Debug\net6.0\EventsManager_00014725.genruntimeconfig.cache
 D:\EventsManager_00014725\EventsManager_00014725\obj\Debug\net6.0\ref\EventsManager_00014725.dll
+D:\00014725\EventsManager_00014725\EventsManager_00014725\obj\Debug\net6.0\EventsManager_00014725.sourcelink.json
