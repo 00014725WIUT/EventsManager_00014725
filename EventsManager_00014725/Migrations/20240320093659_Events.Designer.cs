@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventsManager_00014725.Migrations
 {
     [DbContext(typeof(GeneralDbContext))]
-    [Migration("20240318103345_EventsManager14725")]
-    partial class EventsManager14725
+    [Migration("20240320093659_Events")]
+    partial class Events
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,7 +50,12 @@ namespace EventsManager_00014725.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("userId")
+                        .HasColumnType("int");
+
                     b.HasKey("EventId");
+
+                    b.HasIndex("userId");
 
                     b.ToTable("Events");
                 });
@@ -78,6 +83,15 @@ namespace EventsManager_00014725.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("EventsManager_00014725.Models.Events", b =>
+                {
+                    b.HasOne("EventsManager_00014725.Models.User", "user")
+                        .WithMany()
+                        .HasForeignKey("userId");
+
+                    b.Navigation("user");
                 });
 #pragma warning restore 612, 618
         }

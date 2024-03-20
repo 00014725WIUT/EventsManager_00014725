@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EventsManager_00014725.Repositories
 {
+
+    // WIUT STUDENT ID: 00014725
+
     public class EventRepository : IRepository<Events>
     {
         private readonly GeneralDbContext _context;
@@ -14,11 +17,11 @@ namespace EventsManager_00014725.Repositories
         }
         public async Task<IEnumerable<Events>> GetAllAsync()
         {
-            return await _context.Events.ToListAsync();
+            return await _context.Events.Include(t => t.user).ToArrayAsync();
         }
         public async Task<Events> GetByIDAsync(int id)
         {
-            return await _context.Events.FindAsync(id);
+            return await _context.Events.Include(t => t.user).FirstOrDefaultAsync(t => t.userId == id);
         }
         public async Task AddAsync(Events entity)
         {

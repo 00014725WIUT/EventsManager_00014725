@@ -8,8 +8,12 @@ export interface Event {
     Language: string;
     UserId: number,
     User: {
+        userId: 0, 
         userName: string;
         userEmail: string;
         userPhone: number
     }
 }
+
+
+

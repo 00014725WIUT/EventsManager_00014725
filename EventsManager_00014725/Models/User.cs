@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EventsManager_00014725.Models
 {
@@ -6,11 +7,28 @@ namespace EventsManager_00014725.Models
     {
         // WIUT STUDENT ID: 00014725
 
+        [ForeignKey("userId")]
         [Required]
         public int UserId { get; set; }
+
         
+        private string _UserName;
+
         [Required(ErrorMessage = "User name is required")]
-        public string UserName { get; set; }
+        public string UserName {
+            get => _UserName;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    //throw new ArgumentException("Name can not be null or empty.");
+                }
+                _UserName = value;
+            }
+
+        }
+
+        
 
 
         [Required(ErrorMessage = " Email is required")]

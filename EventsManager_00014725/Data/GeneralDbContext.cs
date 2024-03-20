@@ -3,6 +3,8 @@ using EventsManager_00014725.Models;
 
 namespace EventsManager_00014725.Data
 {
+    // WIUT STUDENT ID: 00014725
+
     public class GeneralDbContext : DbContext
     {
         public GeneralDbContext(DbContextOptions<GeneralDbContext> o) : base(o) { }

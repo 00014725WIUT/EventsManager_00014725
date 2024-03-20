@@ -14,6 +14,7 @@ function findIndexByID(jsonArray: any[], indexToFind: number): number {
   return jsonArray.findIndex((item) => item.id === indexToFind);
 }
 
+//--  WIUT STUDENT ID: 00014725 --//
 
 @Component({
   selector: 'app-edit',
@@ -22,6 +23,7 @@ function findIndexByID(jsonArray: any[], indexToFind: number): number {
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.css'
 })
+
 export class EditComponent {
     serv = inject(APIService);
     activatedRoute = inject(ActivatedRoute);
@@ -36,19 +38,22 @@ export class EditComponent {
       Language: "",
       UserId: 0,
       User : {
+        userId: 0,
         userName: "",
         userEmail: "",
         userPhone: 0
       }
     }
     userCategory: any;
+    selected: any;
     cID: number = 0;
-    selected: any
+    
 
     
 
     ngOnInit() {
       console.log(this.activatedRoute.snapshot.params["id"])
+
       this.serv.getByID(this.activatedRoute.snapshot.params["id"]).subscribe(result =>{
           this.editEvent = result;
           console.log(this.editEvent)

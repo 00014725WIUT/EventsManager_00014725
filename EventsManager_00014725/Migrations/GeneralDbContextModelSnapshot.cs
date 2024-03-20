@@ -48,7 +48,12 @@ namespace EventsManager_00014725.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("userId")
+                        .HasColumnType("int");
+
                     b.HasKey("EventId");
+
+                    b.HasIndex("userId");
 
                     b.ToTable("Events");
                 });
@@ -76,6 +81,15 @@ namespace EventsManager_00014725.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("EventsManager_00014725.Models.Events", b =>
+                {
+                    b.HasOne("EventsManager_00014725.Models.User", "user")
+                        .WithMany()
+                        .HasForeignKey("userId");
+
+                    b.Navigation("user");
                 });
 #pragma warning restore 612, 618
         }

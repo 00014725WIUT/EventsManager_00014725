@@ -30,7 +30,7 @@ namespace EventsManager_00014725.Repositories
         }
         public async Task UpdateAsync(User entity)
         {
-            _context.Users.Update(entity);
+            _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 

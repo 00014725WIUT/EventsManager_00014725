@@ -8,6 +8,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 
+
+//--  WIUT STUDENT ID: 00014725 --//
+
 @Component({
   selector: 'app-create',
   standalone: true,
@@ -18,7 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class CreateComponent {
   ApiService = inject(APIService)
   router = inject(Router)
-  use: any;
+  individual: any;
   cID: number = 0
   
   createEvent: Event = {
@@ -30,6 +33,7 @@ export class CreateComponent {
     Language: '',
     UserId: 0,
     User : {
+      userId:0,
       userName: "",
       userEmail: "",
       userPhone: 0
@@ -38,7 +42,7 @@ export class CreateComponent {
 
   ngOnInit(){
       this.ApiService.getAllUsers().subscribe((result) => {
-        this.use = result
+        this.individual = result
       })
   }
 

@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips'
 import { MatCardModule } from '@angular/material/card';
 
-
+//--  WIUT STUDENT ID: 00014725 --//
 
 @Component({
   selector: 'app-details',
@@ -24,6 +24,7 @@ export class DetailsComponent {
     Language: '',
     UserId: 0,
     User : {
+      userId: 0,
       userName: "",
       userEmail: "",
       userPhone: 0

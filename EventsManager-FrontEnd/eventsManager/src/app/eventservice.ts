@@ -13,7 +13,7 @@ export class APIService {
         return this.httpClient.get<Event[]>("https://localhost:7097/api/Events/GetAll/GetAll")
     };
     getByID(id: number){
-        return this.httpClient.get<Event>("https://localhost:7097/api/Events/GetByID/"+id);
+        return this.httpClient.get<Event>("https://localhost:7097/api/Events/GetByID/"+ id);
     };
     edit(item:Event) {
         return this.httpClient.put("https://localhost:7097/api/Events/Update", item);
@@ -28,3 +28,8 @@ export class APIService {
         return this.httpClient.get("https://localhost:7097/api/User/GetAll")
     }
 }
+
+
+
+
+//--  WIUT STUDENT ID: 00014725 --//

@@ -14,6 +14,9 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './delete.component.css'
 })
 
+
+//--  WIUT STUDENT ID: 00014725 --//
+
 export class DeleteComponent {
   deleteEvent: Event = {
     EventId: 0,
@@ -24,6 +27,7 @@ export class DeleteComponent {
     Language: '',
     UserId: 0,
     User : {
+      userId: 0, 
       userName: "",
       userEmail: "",
       userPhone: 0

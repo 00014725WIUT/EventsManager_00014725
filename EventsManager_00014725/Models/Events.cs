@@ -22,6 +22,9 @@ namespace EventsManager_00014725.Models
         [Required(ErrorMessage = "Cost is required")]
         public decimal Cost { get; set; }
         public string Language { get; set; }
+        public int? userId { get; set; }
+
+        public User? user { get; set; }
     }
 }
 

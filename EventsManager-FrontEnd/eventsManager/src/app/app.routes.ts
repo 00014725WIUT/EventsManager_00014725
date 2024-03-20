@@ -5,6 +5,9 @@ import { EditComponent } from './components/edit/edit.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { DetailsComponent } from './components/details/details.component';
 
+
+//--  WIUT STUDENT ID: 00014725 --//
+
 export const routes: Routes = [ 
     {
         path: "",
@@ -19,7 +22,7 @@ export const routes: Routes = [
         component: CreateComponent
     },
     {
-        path: "edit/:id",
+        path: `edit/:id`,
         component: EditComponent
     }
     ,
