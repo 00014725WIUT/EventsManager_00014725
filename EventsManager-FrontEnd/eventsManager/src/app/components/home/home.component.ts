@@ -5,6 +5,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 
+
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -16,7 +18,8 @@ export class HomeComponent {
   ApiService=inject(APIService); 
   router = inject(Router)
   events: Event [] = [];
-  activatedRoute = ActivatedRoute;
+
+
 
   displayedColumns: string[] = ['ID', 'Event Name', 'Event Date', 'Location', 'User Name','Cost', 'Language', 'Actions'];
 
